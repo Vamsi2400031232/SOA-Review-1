@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Production
+build/
+dist/
+
+# Java / Spring Boot
+target/
+*.class
+
+# IntelliJ IDEA / Eclipse / VS Code
+.idea/
+.settings/
+.classpath
+.project
+*.iml
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
