@@ -145,12 +145,14 @@ export default function Dashboard({ user }) {
       <div className="space-y-8">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
-            <div className="flex items-center gap-2 mb-1">
-              <span className="h-2 w-2 rounded-full bg-bronze-500" />
-              <span className="text-xs uppercase font-extrabold tracking-widest text-bronze-600">Welcome Back</span>
+            <div className="flex items-center gap-2 mb-2">
+              <span className="h-2.5 w-2.5 rounded-full bg-gradient-to-r from-amber-400 to-bronze-500 animate-pulse" />
+              <span className="text-xs uppercase font-extrabold tracking-widest text-bronze-600">MEMBER PORTAL</span>
             </div>
-            <h2 className="text-3xl font-black text-forest-700 tracking-tight">Your Dashboard</h2>
-            <p className="text-sm text-charcoal/70">Hey {user.name}, view your fitness journey and active subscription.</p>
+            <h2 className="text-4xl sm:text-5xl font-black text-forest-700 tracking-tight leading-tight">
+              Welcome, <span className="text-transparent bg-clip-text bg-gradient-to-r from-forest-600 to-emerald-600">{user.name || user.username}</span>!
+            </h2>
+            <p className="text-base text-charcoal/70 mt-2 font-medium">View your fitness journey and active subscription.</p>
           </div>
         </div>
 
@@ -241,12 +243,14 @@ export default function Dashboard({ user }) {
       {/* Page Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <div className="flex items-center gap-2 mb-1">
-            <span className="h-2 w-2 rounded-full bg-bronze-500" />
-            <span className="text-xs uppercase font-extrabold tracking-widest text-bronze-600">Overview Analytics</span>
+          <div className="flex items-center gap-2 mb-2">
+            <span className="h-2.5 w-2.5 rounded-full bg-gradient-to-r from-red-500 to-bronze-600 animate-pulse" />
+            <span className="text-xs uppercase font-extrabold tracking-widest text-bronze-600">EXECUTIVE DASHBOARD</span>
           </div>
-          <h2 className="text-3xl font-black text-forest-700 tracking-tight">Executive Dashboard</h2>
-          <p className="text-sm text-charcoal/70">Real-time multi-center metrics, subscriber analytics, and entry gate traffic.</p>
+          <h2 className="text-4xl sm:text-5xl font-black text-forest-700 tracking-tight leading-tight">
+            Welcome, <span className="text-transparent bg-clip-text bg-gradient-to-r from-bronze-600 to-forest-800">{user.name || user.username}</span>!
+          </h2>
+          <p className="text-base text-charcoal/70 mt-2 font-medium">Real-time multi-center metrics, subscriber analytics, and entry gate traffic.</p>
         </div>
         <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-2xl border border-cream-300 shadow-sm text-xs font-bold text-forest-700">
           <Sparkles className="h-4 w-4 text-bronze-500" />
