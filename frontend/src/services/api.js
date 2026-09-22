@@ -73,6 +73,12 @@ export const api = {
           method: 'POST',
           body: JSON.stringify(userData)
         });
+        // Sync with mockDb because backend doesn't have Member API yet
+        try {
+          mockDb.registerUser(userData);
+        } catch (e) {
+          // Ignore duplicate errors in mock db
+        }
         return data;
       } catch (err) {
         // Fallback to local user registration
